@@ -1,3 +1,4 @@
+#pylint: disable=e0602
 """Write my name with a turtle
 
 The task was to write my name with a turtle, but I haven't learned how to "jump"
@@ -10,7 +11,7 @@ from turtle import * #pylint: disable=W0401,W0614
 
 PENSIZE = 60
 
-speed(11)
+speed(20)
 pensize(PENSIZE)
 
 def draw_line(length, colour='black'):
@@ -26,6 +27,7 @@ def draw_triangle(sidelength=10, colour='black'):
         draw_line(sidelength, colour)
         right(120)
         draw_line(sidelength, colour)
+        right(50)
 
 COLOURS = ['green', 'red', 'blue', 'purple', 'yellow']
 
@@ -38,6 +40,6 @@ if __name__ == '__main__':
         # see the colours.
         for _c in COLOURS:
             draw_triangle(_l, _c)
-            PENSIZE -= 4
+            PENSIZE -= 2
             pensize(PENSIZE)
-sleep(10)
+sleep(1)
